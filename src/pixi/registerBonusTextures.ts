@@ -27,6 +27,7 @@ export interface RegisterBonusTextures {
   chip_right_single: Texture;
 }
 
+// Относительный путь — Vite подхватывает при сборке и кладёт в dist/assets/ с хешем (как firstDeposit)
 const base = "../../register-bonus/animated";
 const load = (path: string) => Assets.load(new URL(`${base}/${path}`, import.meta.url).href);
 

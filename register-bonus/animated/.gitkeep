@@ -1,0 +1,2 @@
+# Положите сюда .webp (eyes, hat_top, hat_bottom, body, nose_mustache, head, left_hand, right_hand, chip_*, forearm, arm и т.д.).
+# Vite при сборке подхватит их и положит в dist/assets/ с хешем — как hand-Blavr_u4.webp для firstDeposit.
