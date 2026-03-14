@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "client/themes/styled": ["src/stubs/styled"],
+      "@easycasino/shared/shared-config": ["src/stubs/shared-config"],
+      "@easycasino/shared/utils/getStaticFilePath": ["src/stubs/getStaticFilePath"]
+    },
+    "types": ["vite/client"]
+  },
+  "include": ["src", "1st-deposit"]
+}
