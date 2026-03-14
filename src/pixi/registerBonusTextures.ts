@@ -27,10 +27,7 @@ export interface RegisterBonusTextures {
   chip_right_single: Texture;
 }
 
-// Относительный путь — Vite подхватывает при сборке и кладёт в dist/assets/ с хешем (как firstDeposit)
-const base = "../../register-bonus/animated";
-const load = (path: string) => Assets.load(new URL(`${base}/${path}`, import.meta.url).href);
-
+// Явные пути — Vite подхватывает при сборке и кладёт в dist/assets/ (как firstDeposit / game-of-month)
 export const loadRegisterBonusTextures = async (): Promise<RegisterBonusTextures> => {
   const [
     head,
@@ -58,30 +55,30 @@ export const loadRegisterBonusTextures = async (): Promise<RegisterBonusTextures
     chip_right_6,
     chip_right_single
   ] = await Promise.all([
-    load("head.webp"),
-    load("hat_top.webp"),
-    load("hat_bottom.webp"),
-    load("eyes.webp"),
-    load("nose_mustache.webp"),
-    load("body.webp"),
-    load("left_hand.webp"),
-    load("left_forearm.webp"),
-    load("right_hand.webp"),
-    load("right_forearm.webp"),
-    load("right_arm.webp"),
-    load("chip_left_single.webp"),
-    load("chip_left_0.webp"),
-    load("chip_left_1.webp"),
-    load("chip_left_2.webp"),
-    load("chip_left_3.webp"),
-    load("chip_left_4.webp"),
-    load("chip_right_0.webp"),
-    load("chip_right_1.webp"),
-    load("chip_right_3.webp"),
-    load("chip_right_4.webp"),
-    load("chip_right_5.webp"),
-    load("chip_right_6.webp"),
-    load("chip_right_single.webp")
+    Assets.load(new URL("../../register-bonus/animated/head.webp", import.meta.url).href),
+    Assets.load(new URL("../../register-bonus/animated/hat_top.webp", import.meta.url).href),
+    Assets.load(new URL("../../register-bonus/animated/hat_bottom.webp", import.meta.url).href),
+    Assets.load(new URL("../../register-bonus/animated/eyes.webp", import.meta.url).href),
+    Assets.load(new URL("../../register-bonus/animated/nose_mustache.webp", import.meta.url).href),
+    Assets.load(new URL("../../register-bonus/animated/body.webp", import.meta.url).href),
+    Assets.load(new URL("../../register-bonus/animated/left_hand.webp", import.meta.url).href),
+    Assets.load(new URL("../../register-bonus/animated/left_forearm.webp", import.meta.url).href),
+    Assets.load(new URL("../../register-bonus/animated/right_hand.webp", import.meta.url).href),
+    Assets.load(new URL("../../register-bonus/animated/right_forearm.webp", import.meta.url).href),
+    Assets.load(new URL("../../register-bonus/animated/right_arm.webp", import.meta.url).href),
+    Assets.load(new URL("../../register-bonus/animated/chip_left_single.webp", import.meta.url).href),
+    Assets.load(new URL("../../register-bonus/animated/chip_left_0.webp", import.meta.url).href),
+    Assets.load(new URL("../../register-bonus/animated/chip_left_1.webp", import.meta.url).href),
+    Assets.load(new URL("../../register-bonus/animated/chip_left_2.webp", import.meta.url).href),
+    Assets.load(new URL("../../register-bonus/animated/chip_left_3.webp", import.meta.url).href),
+    Assets.load(new URL("../../register-bonus/animated/chip_left_4.webp", import.meta.url).href),
+    Assets.load(new URL("../../register-bonus/animated/chip_right_0.webp", import.meta.url).href),
+    Assets.load(new URL("../../register-bonus/animated/chip_right_1.webp", import.meta.url).href),
+    Assets.load(new URL("../../register-bonus/animated/chip_right_3.webp", import.meta.url).href),
+    Assets.load(new URL("../../register-bonus/animated/chip_right_4.webp", import.meta.url).href),
+    Assets.load(new URL("../../register-bonus/animated/chip_right_5.webp", import.meta.url).href),
+    Assets.load(new URL("../../register-bonus/animated/chip_right_6.webp", import.meta.url).href),
+    Assets.load(new URL("../../register-bonus/animated/chip_right_single.webp", import.meta.url).href)
   ]);
 
   return {

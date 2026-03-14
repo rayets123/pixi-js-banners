@@ -29,9 +29,7 @@ export interface LoyaltyTextures {
   coin_splash_2: Texture;
 }
 
-const base = "../../loyalty/animated";
-const load = (path: string) => Assets.load(new URL(`${base}/${path}`, import.meta.url).href);
-
+// Явные пути — Vite подхватывает при сборке и кладёт в dist/assets/ (как firstDeposit / game-of-month)
 export const loadLoyaltyTextures = async (): Promise<LoyaltyTextures> => {
   const [
     body,
@@ -61,32 +59,32 @@ export const loadLoyaltyTextures = async (): Promise<LoyaltyTextures> => {
     coin_splash_1,
     coin_splash_2
   ] = await Promise.all([
-    load("body.webp"),
-    load("hat.webp"),
-    load("hat_bottom.webp"),
-    load("face.webp"),
-    load("mustache.webp"),
-    load("beard.webp"),
-    load("eyes.webp"),
-    load("mustache_left.webp"),
-    load("mustache_right.webp"),
-    load("nose.webp"),
-    load("mouth.webp"),
-    load("coins_pot.webp"),
-    load("right_sleeve.webp"),
-    load("right_finger_open.webp"),
-    load("right_hand_full.webp"),
-    load("right_finger_closed.webp"),
-    load("left_arm.webp"),
-    load("left_forearm.webp"),
-    load("left_hand.webp"),
-    load("left_fingers_open.webp"),
-    load("left_fingers_closed.webp"),
-    load("left_thumb_open.webp"),
-    load("left_thumb_closed.webp"),
-    load("coin_splash_start.webp"),
-    load("coin_splash_1.webp"),
-    load("coin_splash_2.webp")
+    Assets.load(new URL("../../loyalty/animated/body.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/hat.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/hat_bottom.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/face.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/mustache.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/beard.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/eyes.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/mustache_left.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/mustache_right.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/nose.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/mouth.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/coins_pot.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/right_sleeve.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/right_finger_open.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/right_hand_full.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/right_finger_closed.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/left_arm.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/left_forearm.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/left_hand.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/left_fingers_open.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/left_fingers_closed.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/left_thumb_open.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/left_thumb_closed.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/coin_splash_start.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/coin_splash_1.webp", import.meta.url).href),
+    Assets.load(new URL("../../loyalty/animated/coin_splash_2.webp", import.meta.url).href)
   ]);
 
   return {

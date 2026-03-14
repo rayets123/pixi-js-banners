@@ -4,7 +4,7 @@ import path from "node:path";
 
 export default defineConfig({
   plugins: [react()],
-  publicDir: "public",
+  publicDir: false,
   resolve: {
     alias: {
       "client/themes/styled": path.resolve(__dirname, "src/stubs/styled.ts"),
